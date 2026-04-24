@@ -1,0 +1,147 @@
+/* 全体の基本設定（ダークテーマ） */
+body {
+    margin: 0;
+    background-color: #0f172a; /* 濃い紺色の背景 */
+    color: #e2e8f0; /* 白みがかった文字色 */
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    line-height: 1.6;
+}
+
+/* PC・iPadでの表示幅の制限と中央寄せ */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* ヘッダーの装飾 */
+header {
+    text-align: center;
+    padding: 3rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header .subtitle {
+    color: #60a5fa;
+    font-size: 0.875rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* タイトルのグラデーション文字 */
+.gradient-text {
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 各セクションの余白と見出し */
+section {
+    margin-bottom: 5rem;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    border-left: 4px solid #3b82f6;
+    padding-left: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+/* すりガラス風のカードデザイン（ログ・班員共通） */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* iPad/Safari用 */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ログ部分の詳細スタイル */
+.log-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.log-header h3 {
+    margin: 0;
+    font-size: 1.125rem;
+    color: white;
+}
+
+.log-date {
+    font-size: 0.875rem;
+    color: #60a5fa;
+}
+
+.glass-card p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+/* 班員紹介のグリッド配置（iPad/PCは横並び、スマホは縦並びに自動調整） */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.text-center {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.text-center h3 {
+    margin: 0 0 0.25rem 0;
+    color: white;
+}
+
+/* 役割ごとの文字色 */
+.role {
+    font-size: 0.875rem;
+    margin: 0;
+    font-weight: bold;
+}
+.role.blue { color: #60a5fa; }
+.role.green { color: #4ade80; }
+.role.orange { color: #fb923c; }
+.role.pink { color: #f472b6; }
+.role.yellow { color: #facc15; }
+.role.purple { color: #c084fc; }
+
+/* 先生用の枠線色 */
+.border-purple {
+    border-color: rgba(192, 132, 252, 0.4);
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #64748b;
+    font-size: 0.875rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* スマホなど画面が小さい時用の微調整 */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    .log-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+}
